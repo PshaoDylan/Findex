@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Findex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Findex - 书签索引</h1>
+    <div class="actions">
+      <button id="syncBtn">一键同步书签</button>
+      <button id="exportBtn">导出为 CSV</button>
+    </div>
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" placeholder="搜索书签(支持正则)...">
+    </div>
+    <div id="results" class="results-container"></div>
+    <div id="status" class="status-message"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
