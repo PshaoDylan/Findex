@@ -1,0 +1,25 @@
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;margin:0;width:400px;color:#111}
+header{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid #eee}
+h1{font-size:16px;margin:0}
+header .right{display:flex;gap:8px;align-items:center}
+button{padding:6px 10px;border:1px solid #ddd;background:#fff;border-radius:8px;cursor:pointer}
+button:hover{background:#f6f6f6}
+.controls{display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 12px}
+#searchInput{grid-column:1/-1;padding:8px;border:1px solid #ddd;border-radius:8px}
+.toggles{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.toggles .view,.toggles .weight{display:flex;gap:6px;align-items:center}
+#meta{display:flex;justify-content:space-between;font-size:12px;padding:0 12px 8px;color:#666}
+#listWrap{padding:0 6px 10px;max-height:520px;overflow:auto}
+.list{list-style:none;margin:0;padding:0}
+.item{padding:8px 6px;border-bottom:1px solid #f2f2f2}
+.item .title{font-size:14px;margin-bottom:4px}
+.item mark{background:#fff2a8;border-radius:3px;padding:0 2px}
+.item .url{font-size:12px;color:#06c;word-break:break-all}
+.badge{display:inline-block;font-size:10px;color:#555;background:#f0f0f0;padding:2px 6px;border-radius:999px;margin-left:6px}
+.folder{color:#999}
+.groups .group{border-bottom:1px solid #eee;padding:6px 0}
+.group .ghead{cursor:pointer;display:flex;align-items:center;gap:8px;font-weight:600}
+.group .gcount{font-size:12px;color:#777}
+.group .gitems{margin:6px 0 8px 14px}
+.switch{display:flex;gap:6px;align-items:center}

@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Findex - 书签快搜",
+  "description": "一键同步浏览器书签到本地存储，支持模糊/正则搜索、CSV 导出、分组视图与增量同步。",
+  "version": "1.2.0",
+  "action": {
+    "default_title": "Findex",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "bookmarks",
+    "storage",
+    "downloads",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

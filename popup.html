@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Findex</title>
+  <link rel="stylesheet" href="popup.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <header>
+    <h1>Findex</h1>
+    <div class="right">
+      <button id="syncBtn" title="从浏览器书签一键同步">一键同步</button>
+      <label class="switch">
+        <input id="realtimeToggle" type="checkbox" />
+        <span>实时</span>
+      </label>
+    </div>
+  </header>
+
+  <section class="controls">
+    <input id="searchInput" placeholder="搜索标题或链接（支持模糊/正则，例如：/github.*star$/i）" />
+    <div class="toggles"><label>算法 <select id="algo"><option value="basic">基础模糊</option><option value="enhanced" selected>增强模糊</option></select></label><button id="clearHistoryBtn" title="清空搜索历史">清空历史</button>
+      <label><input type="radio" name="mode" value="fuzzy" checked /> 模糊</label>
+      <label><input type="radio" name="mode" value="regex" /> 正则</label>
+      <label class="view">
+        <input type="checkbox" id="groupView" />
+        <span>分组视图</span>
+      </label>
+      <label class="weight">
+        标题权重 <input type="range" id="titleWeight" min="1" max="5" value="3" />
+      </label>
+    </div>
+    <button id="exportBtn" title="导出当前数据为CSV">导出 CSV</button>
+  </section>
+
+  <section id="meta">
+    <span id="count">0 项</span>
+    <span id="syncedAt">未同步</span>
+  </section>
+
+  <div id="listWrap">
+    <ul id="resultList" class="list"></ul>
+    <div id="groupList" class="groups" hidden></div>
+  </div>
+
+  <script type="module" src="utils.js"></script>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
