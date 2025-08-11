@@ -1,4 +1,4 @@
-class QuickMark {
+class Findex {
     constructor() {
         this.bookmarks = [];
         this.filteredBookmarks = [];
@@ -237,7 +237,7 @@ class QuickMark {
         const url = URL.createObjectURL(blob);
         
         link.setAttribute('href', url);
-        link.setAttribute('download', `QuickMark_bookmarks_${new Date().toISOString().split('T')[0]}.csv`);
+        link.setAttribute('download', `findex_bookmarks_${new Date().toISOString().split('T')[0]}.csv`);
         link.style.visibility = 'hidden';
         
         document.body.appendChild(link);
@@ -248,5 +248,5 @@ class QuickMark {
 
 // 初始化应用
 document.addEventListener('DOMContentLoaded', () => {
-    new QuickMark();
+    new Findex();
 });

@@ -1,9 +1,9 @@
-// QuickMark 后台服务脚本
+// Findex 后台服务脚本
 
 // 插件安装时的初始化
 chrome.runtime.onInstalled.addListener((details) => {
     if (details.reason === 'install') {
-        console.log('QuickMark 插件已安装');
+        console.log('Findex 插件已安装');
         
         // 设置默认配置
         chrome.storage.local.set({
@@ -54,7 +54,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 // 定期清理存储空间（可选）
 setInterval(() => {
     chrome.storage.local.getBytesInUse().then(bytesInUse => {
-        console.log('QuickMark 存储使用量:', bytesInUse, 'bytes');
+        console.log('Findex 存储使用量:', bytesInUse, 'bytes');
         
         // 如果存储使用量过大，可以进行清理
         if (bytesInUse > 5 * 1024 * 1024) { // 5MB
