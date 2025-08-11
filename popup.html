@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>Findex</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickMark</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Findex - 书签索引</h1>
-    <div class="actions">
-      <button id="syncBtn">一键同步书签</button>
-      <button id="exportBtn">导出为 CSV</button>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">QuickMark</h1>
+            <p class="slogan">Just QuickMark it!</p>
+        </header>
+        
+        <div class="controls">
+            <button id="syncBtn" class="sync-btn">
+                <span class="sync-icon">🔄</span>
+                一键同步收藏夹
+            </button>
+            <div class="sync-status" id="syncStatus"></div>
+        </div>
+        
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="搜索收藏夹..." class="search-input">
+                <div class="search-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="regexMode">
+                        正则表达式
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <span id="bookmarkCount">共 0 个收藏</span>
+            <button id="exportBtn" class="export-btn">导出CSV</button>
+        </div>
+        
+        <div class="bookmarks-container">
+            <div id="bookmarksList" class="bookmarks-list"></div>
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>未找到匹配的收藏夹</p>
+            </div>
+        </div>
     </div>
-    <div class="search-wrapper">
-      <input type="text" id="searchInput" placeholder="搜索书签(支持正则)...">
-    </div>
-    <div id="results" class="results-container"></div>
-    <div id="status" class="status-message"></div>
-  </div>
-  <script src="popup.js"></script>
+    
+    <script src="popup.js"></script>
 </body>
 </html>
